@@ -2,11 +2,76 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
     <meta name="author" content="Patryk Jankowiak">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
     <title>Patryk Jankowiak</title>
 </head>
-<body style="text-align: center; margin-top: 200px;">
-    <img src="/img/building.png" alt="Website is still being built" style="width: 100vw; max-width: 400px;">
+<body>
+    <header>
+        <input type="checkbox">
+        <div class="menu">
+            <div id="top"></div>
+            <div id="middle"></div>
+            <div id="bottom"></div>
+        </div>
+        <div class="menucontainer">
+            <ul>
+                <div>
+                    <a href="/index.html">Home</a>
+                </div>
+                <div>
+                    <a href="#projekty">Projekty</a>
+                </div>
+                <div>
+                    <a href="#omnie">O mnie</a>
+                </div>
+                <div>
+                    <a href="#kontakt">Kontakt</a>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="name">
+            <h1>Patryk Jankowiak</h1>
+            <h2>Frontend developer</h2>
+        </div>
+        <div class="arrow bounce"></div>
+    </main>
+    <section id="projekty">
+        <div>
+            <p>Snake</p>
+            <a href="/snake.html">
+                <img src="/img/snake.png" alt="Snake game">
+            </a>
+        </div>
+        <div>
+            <p>To Do List</p>
+            <a href="/lista.html">
+                <img src="/img/todo.png" alt="Snake game">
+            </a>
+        </div>
+        <div>
+            <p>Projekt 3</p>
+            <a href="/lista.html">
+                <img src="/img/tmpphoto.png" alt="Snake game">
+            </a>
+        </div>
+        <div>
+            <p>Projekt 4</p>
+            <a href="/lista.html">
+                <img src="/img/tmpphoto.png" alt="Snake game">
+            </a>
+        </div>
+    </section>
+    <section id="omnie">
+
+    </section>
+
+    <section id="kontakt">
+        <p>E-mail: <a href="mailto:patryk@patrykjankowiak.dev">patryk@patrykjankowiak.dev</a></p>
+    </section>
 </body>
 </html>
