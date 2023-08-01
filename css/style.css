@@ -34,6 +34,9 @@ html body {
   background-color: #A8DADC;
   overflow-x: hidden;
 }
+html body .buildingimg {
+  opacity: 0;
+}
 html body header {
   display: flex;
   padding: 30px;
@@ -441,85 +444,23 @@ html body .gra .player {
   }
 }
 @media screen and (max-width: 450px) {
-  body {
-    position: fixed;
+  body .buildingimg {
+    opacity: 1 !important;
   }
   body header {
-    padding: 0 !important;
-    margin: 0 !important;
-    height: 60px !important;
-    width: 100vw !important;
-    opacity: 1;
+    opacity: 0;
   }
-  body header input {
-    display: none;
+  body main {
+    opacity: 0;
   }
-  body header input:not(:checked) ~ .menucontainer {
-    opacity: 1;
+  body #omnie {
+    opacity: 0;
   }
-  body header .menu {
-    display: none;
+  body #kontakt {
+    opacity: 0;
   }
-  body header .menucontainer {
-    display: flex !important;
-  }
-  body main h1 {
-    font-size: 35px !important;
-    margin-top: -50px;
-    letter-spacing: 10px !important;
-  }
-  body main h2 {
-    font-size: 15px !important;
-    margin-left: 40px !important;
-  }
-}
-@media screen and (max-width: 320px) {
-  body {
-    position: fixed;
-  }
-  body header {
-    padding: 0 !important;
-    margin: 0 !important;
-    height: 60px !important;
-    width: 100vw !important;
-    opacity: 1;
-  }
-  body header input {
-    display: none;
-  }
-  body header input:not(:checked) ~ .menucontainer {
-    opacity: 1;
-  }
-  body header .menu {
-    display: none;
-  }
-  body header .menucontainer {
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 105vw !important;
-    height: 60px !important;
-    border-radius: 0 !important;
-  }
-  body header .menucontainer ul {
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 105vw !important;
-    height: 100% !important;
-    display: flex !important;
-    justify-content: space-around !important;
-  }
-  body header .menucontainer ul a {
-    margin: 0 !important;
-    font-size: 15px !important;
-    padding-top: 17px;
-  }
-  body main h1 {
-    font-size: 30px !important;
-    margin-top: -50px;
-    letter-spacing: 5px !important;
-  }
-  body main h2 {
-    font-size: 10px !important;
+  body #projekty {
+    opacity: 0;
   }
 }
 @keyframes topOnload {

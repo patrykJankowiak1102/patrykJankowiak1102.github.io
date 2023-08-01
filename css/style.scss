@@ -36,6 +36,10 @@ html{
         font-family: 'Roboto Mono', monospace;;
         background-color: $color-bright;
         overflow-x: hidden;
+
+        .buildingimg{
+            opacity: 0;
+        }
     
         header{
             display: flex;
@@ -490,111 +494,26 @@ html{
 @media screen and (max-width: 450px) {
     
     body{
-        position: fixed;
-        
+        .buildingimg{
+            opacity: 1 !important;
+        }
         header{
-            padding: 0 !important;
-            margin: 0 !important;
-            height: 60px !important;
-            width: 100vw !important;
-            opacity: 1;
-
-            input{
-                display: none;
-            }
-            input:not(:checked) ~ .menucontainer{
-                opacity: 1;
-            }
-            .menu{
-                display: none;
-            }
-            .menucontainer{
-                
-                display: flex !important;
-
-                ul{
-
-                    
-
-                    div{
-                        
-
-                        a{
-
-                        } 
-                    }
-                }
-            }
+            opacity: 0;
         }
         main{
-            h1{
-                font-size: 35px !important;
-                margin-top: -50px;
-                letter-spacing: 10px !important;
-            }
-            h2{
-                font-size: 15px !important;
-                margin-left: 40px !important;
-            }   
+            opacity: 0;  
+        }
+        #omnie{
+            opacity: 0;
+        }
+        #kontakt{
+            opacity: 0;
+        }
+        #projekty{
+            opacity: 0;
         }
     }
 }
-@media screen and (max-width: 320px) {
-    
-    body{
-        position: fixed;
-        
-        header{
-            padding: 0 !important;
-            margin: 0 !important;
-            height: 60px !important;
-            width: 100vw !important;
-            opacity: 1;
-
-            input{
-                display: none;
-            }
-            input:not(:checked) ~ .menucontainer{
-                opacity: 1;
-            }
-            .menu{
-                display: none;
-            }
-            .menucontainer{
-                padding: 0 !important;
-                margin: 0 !important;
-                width: 105vw !important;
-                height: 60px !important;
-                border-radius: 0 !important;
-                ul{
-                    padding: 0 !important;
-                    margin: 0 !important;
-                    width: 105vw !important;
-                    height: 100% !important;
-                    display: flex !important;
-                    justify-content: space-around !important;
-                    a{
-                        margin: 0 !important;
-                        font-size: 15px !important;
-                        padding-top: 17px;
-                    }   
-                }
-            }
-        }
-        main{
-            h1{
-                font-size: 30px !important;
-                margin-top: -50px;
-                letter-spacing: 5px !important;
-            }
-            h2{
-                font-size: 10px !important;
-                
-            }
-        }
-    }
-}
-
 
 @keyframes topOnload{
     0%{width: 22%;}
