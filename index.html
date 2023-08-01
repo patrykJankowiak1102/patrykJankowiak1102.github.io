@@ -72,6 +72,28 @@
 
     <section id="kontakt">
         <p>E-mail: <a href="mailto:patryk@patrykjankowiak.dev">patryk@patrykjankowiak.dev</a></p>
+        <form action="https://formspree.io/f/mjvqgevn" method="POST">
+            <label>
+                <div>
+                    Email:
+                </div>
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                <div>
+                    Imię i nazwisko:
+                </div>
+                <input type="text" name="name" required>
+            </label>
+            <label>
+                <div>
+                    Wiadomość:
+                </div>
+                <textarea name="message" maxlength="2000" required></textarea>
+            </label>
+
+            <button type="submit">Wyślij</button>
+        </form>
     </section>
 </body>
 </html>
