@@ -1,30 +1,30 @@
-window.onload = setTimeout(() => {
+// window.onload = setTimeout(() => {
 
-    let alertCheck = localStorage.getItem("alert");
+//     let alertCheck = localStorage.getItem("alert");
 
-    if (alertCheck == undefined) {
+//     if (alertCheck == undefined) {
 
-        alertCheck = 0;
+//         alertCheck = 0;
 
-        localStorage.setItem("alert", alertCheck);
+//         localStorage.setItem("alert", alertCheck);
 
-    } else {
+//     } else {
 
-        if (alertCheck < 10) {
+//         if (alertCheck < 10) {
 
-            alertCheck++;
+//             alertCheck++;
 
-            localStorage.setItem("alert", alertCheck);
+//             localStorage.setItem("alert", alertCheck);
 
-            console.log(alertCheck);
+//             console.log(alertCheck);
 
-        } else {
+//         } else {
 
-            alert("Strona jeszcze nie skończona, mogą występować liczne błędy i niedociągnięcia:)");
+//             alert("Strona jeszcze nie skończona, mogą występować liczne błędy i niedociągnięcia:)");
 
-            alertCheck = 0;
+//             alertCheck = 0;
 
-            localStorage.setItem("alert", 0);
-        }
-    }
-}, 1000);
+//             localStorage.setItem("alert", 0);
+//         }
+//     }
+// }, 1000);
