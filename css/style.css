@@ -191,7 +191,7 @@ html body main .languages {
   display: flex;
 }
 html body main .languages img {
-  opacity: 0.9;
+  opacity: 0.8;
   margin-left: 15px;
   width: 60px;
   height: auto;
@@ -701,10 +701,10 @@ html body .gra .player {
     opacity: 0;
   }
   20% {
-    opacity: 0.9;
+    opacity: 0.8;
   }
   100% {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 }
 @keyframes nameOpacity {
