@@ -308,7 +308,7 @@ html body #kontakt {
   width: 100%;
   height: 100vh;
   background-color: #1D3557;
-  font-size: 2vw;
+  font-size: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -316,7 +316,7 @@ html body #kontakt {
 html body #kontakt p {
   color: #F1FAEE;
   margin: 0;
-  padding-top: 2vw;
+  padding-top: 20px;
 }
 html body #kontakt a {
   text-decoration: none;
@@ -327,37 +327,44 @@ html body #kontakt a:hover {
   text-decoration: underline;
 }
 html body #kontakt form {
-  margin-top: 2vw;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 30%;
+  width: 500px;
   color: #F1FAEE;
-  font-size: 2vw;
   overflow: hidden;
-}
-html body #kontakt form input {
-  height: 1vw;
-  width: 50%;
-  margin: 0;
-  border-radius: 4px;
-}
-html body #kontakt form textarea {
-  width: 80%;
-  min-height: 100px;
-  border-radius: 4px;
+  align-items: center;
 }
 html body #kontakt form button {
-  height: 2vw;
-  border-radius: 4px;
+  height: 30px;
+  border-radius: 5px;
   border: 0;
   background-color: rgba(255, 255, 255, 0.8);
   color: #1D3557;
-  font-size: 1vw;
+  font-size: 20px;
+  width: 504px;
 }
 html body #kontakt form button:hover {
   cursor: pointer;
   background-color: rgb(255, 255, 255);
+}
+html body #kontakt form div {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
+html body #kontakt form div input {
+  height: 30px;
+}
+html body #kontakt form div textarea {
+  height: 150px;
+}
+html body #kontakt form div input, html body #kontakt form div textarea {
+  width: 500px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 html body .game {
   width: 100%;

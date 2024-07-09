@@ -6,6 +6,7 @@
     <meta name="author" content="Patryk Jankowiak">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/script.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Patryk Jankowiak</title>
 </head>
 <body>
@@ -83,23 +84,20 @@
         <form action="https://formspree.io/f/mjvqgevn" method="POST">
             <label>
                 <div>
-                    Email:
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
-                <input type="email" name="email" required>
             </label>
             <label>
                 <div>
-                    Imię i nazwisko:
+                    <input type="text" name="name" placeholder="Imię i nazwisko"  required>
                 </div>
-                <input type="text" name="name" required>
             </label>
             <label>
                 <div>
-                    Wiadomość:
+                    <textarea name="message" maxlength="2000" placeholder="Wiadomość"  required></textarea>
                 </div>
-                <textarea name="message" maxlength="2000" required></textarea>
             </label>
-
+            
             <button type="submit">Wyślij</button>
         </form>
     </section>
