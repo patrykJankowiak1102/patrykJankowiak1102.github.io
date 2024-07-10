@@ -166,10 +166,13 @@ html{
                 a{
                     color: $color-font;
                     text-decoration: none;
-                    
 
                     &:hover{
                         cursor: pointer;
+                    }
+
+                    img{
+                        width: 60px;
                     }
                 }
             }

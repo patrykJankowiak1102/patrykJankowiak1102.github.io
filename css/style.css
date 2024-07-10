@@ -164,6 +164,9 @@ html body header .sourceCode a {
 html body header .sourceCode a:hover {
   cursor: pointer;
 }
+html body header .sourceCode a img {
+  width: 60px;
+}
 html body main {
   height: 80vh;
   position: relative;
