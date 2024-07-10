@@ -39,6 +39,7 @@ html body {
 html body header {
   display: flex;
   padding: 30px;
+  justify-content: space-between;
 }
 html body header input {
   width: 55px;
@@ -152,6 +153,17 @@ html body header .menucontainer ul a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
+html body header .sourceCode {
+  display: flex;
+  align-items: center;
+}
+html body header .sourceCode a {
+  color: #1D3557;
+  text-decoration: none;
+}
+html body header .sourceCode a:hover {
+  cursor: pointer;
+}
 html body main {
   height: 80vh;
   position: relative;
@@ -201,7 +213,6 @@ html body main .languages img {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 html body main .languages img:hover {
-  cursor: pointer;
   transform: scale(1.1);
   opacity: 1;
 }
