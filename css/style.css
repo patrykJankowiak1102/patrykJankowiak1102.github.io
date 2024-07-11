@@ -22,10 +22,6 @@
   background: #F1FAEE;
 }
 
-* {
-  font-family: "Roboto Mono", monospace;
-}
-
 html {
   scrollbar-color: #1D3557 #457B9D;
   scroll-behavior: smooth;
@@ -34,9 +30,10 @@ html body {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
   background-color: #A8DADC;
   overflow-x: hidden;
-  position: relative;
+  position: absolute;
   z-index: 0;
 }
 html body header {
@@ -85,9 +82,6 @@ html body header input:checked:hover ~ .menu #top {
 html body header input:checked:hover ~ .menu #middle {
   background-color: #E63946;
 }
-html body header input:checked ~ .menucontainer ul {
-  display: flex;
-}
 html body header .menu {
   height: 60px;
   width: 60px;
@@ -121,7 +115,7 @@ html body header .menucontainer {
   opacity: 0;
   background-color: #457B9D;
   height: 60px;
-  width: 400px;
+  width: 500px;
   position: absolute;
   border-radius: 30px;
   margin-top: -3px;
@@ -129,7 +123,7 @@ html body header .menucontainer {
   padding-left: 50px;
 }
 html body header .menucontainer ul {
-  display: none;
+  display: flex;
   flex-direction: row;
   align-items: flex-start;
   list-style-type: none;
@@ -194,7 +188,7 @@ html body main .name h1 {
   z-index: 1;
   animation-name: nameAppear, nameOpacity;
   animation-timing-function: ease;
-  animation-duration: 0.75s;
+  animation-duration: 3s;
 }
 html body main .name h2 {
   color: #E63946;
@@ -204,7 +198,7 @@ html body main .name h2 {
   z-index: 1;
   animation-name: nameAppear, nameOpacity;
   animation-timing-function: ease;
-  animation-duration: 0.8s;
+  animation-duration: 3.5s;
 }
 html body main .languages {
   margin-left: 30px;
@@ -218,7 +212,7 @@ html body main .languages img {
   height: auto;
   z-index: 1;
   position: relative;
-  animation: nameAppear 0.9s ease, imageOpacity 0.9s ease;
+  animation: nameAppear 4s ease, imageOpacity 4s ease;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 html body main .languages img:hover {
@@ -291,10 +285,43 @@ html body #projekty div p {
   color: #1D3557;
   font-size: 3vw;
 }
+html body #omnie {
+  background-color: #457B9D;
+  width: 100%;
+  height: 100vh;
+  color: #1D3557;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  overflow-wrap: normal;
+}
+html body #omnie h1 {
+  font-size: calc(35px + 1.5vw);
+  margin: 0;
+}
+html body #omnie p {
+  font-size: calc(5px + 1vw);
+  margin-right: 10vw;
+}
+html body #omnie mark {
+  color: #E63946;
+  background-color: transparent;
+}
+html body #omnie .left {
+  background-color: rgba(255, 0, 0, 0.5);
+  float: left;
+  width: 10%;
+  clear: both;
+}
+html body #omnie .right {
+  background-color: rgba(0, 255, 0, 0.5);
+  float: left;
+  width: 75%;
+  padding-left: 5vw;
+}
 html body #kontakt {
   width: 100%;
-  height: 50vh;
-  background-color: #457B9D;
+  height: 100vh;
+  background-color: #1D3557;
   font-size: 24px;
   display: flex;
   flex-direction: column;
@@ -308,7 +335,7 @@ html body #kontakt p {
 html body #kontakt a {
   text-decoration: none;
   background-color: transparent;
-  color: #A8DADC;
+  color: #E63946;
 }
 html body #kontakt a:hover {
   text-decoration: underline;
@@ -329,7 +356,7 @@ html body #kontakt form button {
   border: 0;
   background-color: rgba(255, 255, 255, 0.8);
   color: #1D3557;
-  font-size: 16px;
+  font-size: 20px;
   width: 504px;
 }
 html body #kontakt form button:hover {
@@ -346,17 +373,12 @@ html body #kontakt form div input {
 }
 html body #kontakt form div textarea {
   height: 150px;
-  padding-top: 5px;
 }
 html body #kontakt form div input, html body #kontakt form div textarea {
   width: 500px;
   border: none;
   border-radius: 5px;
   margin-bottom: 10px;
-  padding-left: 20px;
-}
-html body #kontakt form div textarea:focus, html body #kontakt form div input:focus {
-  outline: none;
 }
 html body .game {
   width: 100%;
@@ -684,7 +706,7 @@ html body .gra .player {
     -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
   }
-  80% {
+  20% {
     transform: translateY(0);
     -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
