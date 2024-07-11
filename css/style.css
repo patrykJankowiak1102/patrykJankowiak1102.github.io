@@ -22,6 +22,10 @@
   background: #F1FAEE;
 }
 
+* {
+  font-family: "Roboto Mono", monospace;
+}
+
 html {
   scrollbar-color: #1D3557 #457B9D;
   scroll-behavior: smooth;
@@ -30,7 +34,6 @@ html body {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto Mono", monospace;
   background-color: #A8DADC;
   overflow-x: hidden;
   position: absolute;
@@ -82,6 +85,9 @@ html body header input:checked:hover ~ .menu #top {
 html body header input:checked:hover ~ .menu #middle {
   background-color: #E63946;
 }
+html body header input:checked ~ .menucontainer ul {
+  display: flex;
+}
 html body header .menu {
   height: 60px;
   width: 60px;
@@ -115,7 +121,7 @@ html body header .menucontainer {
   opacity: 0;
   background-color: #457B9D;
   height: 60px;
-  width: 500px;
+  width: 400px;
   position: absolute;
   border-radius: 30px;
   margin-top: -3px;
@@ -123,7 +129,7 @@ html body header .menucontainer {
   padding-left: 50px;
 }
 html body header .menucontainer ul {
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: flex-start;
   list-style-type: none;
@@ -285,43 +291,10 @@ html body #projekty div p {
   color: #1D3557;
   font-size: 3vw;
 }
-html body #omnie {
-  background-color: #457B9D;
-  width: 100%;
-  height: 100vh;
-  color: #1D3557;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  overflow-wrap: normal;
-}
-html body #omnie h1 {
-  font-size: calc(35px + 1.5vw);
-  margin: 0;
-}
-html body #omnie p {
-  font-size: calc(5px + 1vw);
-  margin-right: 10vw;
-}
-html body #omnie mark {
-  color: #E63946;
-  background-color: transparent;
-}
-html body #omnie .left {
-  background-color: rgba(255, 0, 0, 0.5);
-  float: left;
-  width: 10%;
-  clear: both;
-}
-html body #omnie .right {
-  background-color: rgba(0, 255, 0, 0.5);
-  float: left;
-  width: 75%;
-  padding-left: 5vw;
-}
 html body #kontakt {
   width: 100%;
-  height: 100vh;
-  background-color: #1D3557;
+  height: 50vh;
+  background-color: #457B9D;
   font-size: 24px;
   display: flex;
   flex-direction: column;
@@ -335,7 +308,7 @@ html body #kontakt p {
 html body #kontakt a {
   text-decoration: none;
   background-color: transparent;
-  color: #E63946;
+  color: #A8DADC;
 }
 html body #kontakt a:hover {
   text-decoration: underline;
@@ -351,7 +324,7 @@ html body #kontakt form {
   align-items: center;
 }
 html body #kontakt form button {
-  height: 30px;
+  height: 35px;
   border-radius: 5px;
   border: 0;
   background-color: rgba(255, 255, 255, 0.8);
@@ -373,12 +346,17 @@ html body #kontakt form div input {
 }
 html body #kontakt form div textarea {
   height: 150px;
+  padding-top: 5px;
 }
 html body #kontakt form div input, html body #kontakt form div textarea {
   width: 500px;
   border: none;
   border-radius: 5px;
   margin-bottom: 10px;
+  padding-left: 20px;
+}
+html body #kontakt form div textarea:focus, html body #kontakt form div input:focus {
+  outline: none;
 }
 html body .game {
   width: 100%;

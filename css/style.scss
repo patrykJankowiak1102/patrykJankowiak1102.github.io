@@ -25,6 +25,9 @@ $color-accent: #E63946;
     background: $color-background;
 }
 
+*{
+    font-family: 'Roboto Mono', monospace;
+}
 html{
     scrollbar-color: $color-font $color-dark;
     scroll-behavior: smooth;
@@ -32,7 +35,6 @@ html{
     body{
         margin: 0 auto; padding: 0;
         box-sizing: border-box;
-        font-family: 'Roboto Mono', monospace;;
         background-color: $color-bright;
         overflow-x: hidden;
         position: absolute;
@@ -84,6 +86,9 @@ html{
             input:checked:hover ~ .menu #middle{
                 background-color: $color-accent;
             }
+            input:checked ~ .menucontainer ul{
+                display: flex;
+            }
             .menu{
                 height: 60px;
                 width: 60px;
@@ -118,7 +123,7 @@ html{
                 opacity: 0;
                 background-color: $color-dark;
                 height: 60px;
-                width: 500px;
+                width: 400px;
                 position: absolute;
                 border-radius: 30px;
                 margin-top: -3px;
@@ -126,7 +131,7 @@ html{
                 padding-left: 50px;
 
                 ul{
-                    display: flex;
+                    display: none;
                     flex-direction: row;
                     align-items: flex-start;
                     list-style-type: none;
@@ -302,44 +307,10 @@ html{
                 }
             }
         }
-        #omnie{
-            background-color: $color-dark;
-            width: 100%;
-            height: 100vh;
-            color: $color-font;
-            padding-left: 5vw;
-            padding-right: 5vw;
-            overflow-wrap: normal;
-
-            h1{
-                font-size: calc(35px + 1.5vw);
-                margin: 0;
-            }
-            p{
-                font-size: calc(5px + 1vw);
-                margin-right: 10vw;
-            }
-            mark{
-                color: $color-accent;
-                background-color: transparent;
-            }
-            .left{
-                background-color: rgb(255, 0, 0, 0.5);
-                float: left;
-                width: 10%;
-                clear: both;
-            }
-            .right{
-                background-color: rgb(0, 255, 0, 0.5);
-                float: left;
-                width: 75%;
-                padding-left: 5vw;
-            }
-        }
         #kontakt{
             width: 100%;
-            height: 100vh;
-            background-color: $color-font;
+            height: 50vh;
+            background-color: $color-dark;
             font-size: 24px;
             display: flex;
             flex-direction: column;
@@ -353,7 +324,7 @@ html{
             a{
                 text-decoration: none;
                 background-color: transparent;
-                color: $color-accent;
+                color: $color-bright;
             }
             a:hover{
                 text-decoration: underline;
@@ -370,7 +341,7 @@ html{
                 align-items: center;
 
                 button{
-                    height: 30px;
+                    height: 35px;
                     border-radius: 5px;
                     border: 0;
                     background-color: rgb(255, 255, 255, 0.8);
@@ -392,14 +363,17 @@ html{
                     }
                     textarea{
                         height: 150px;
+                        padding-top: 5px;
                     }
-
                     input, textarea{
                         width: 500px;
                         border: none;
                         border-radius: 5px;
                         margin-bottom: 10px;
-                        
+                        padding-left: 20px;
+                    }
+                    textarea:focus, input:focus{
+                        outline: none;
                     }
                 }
             }
