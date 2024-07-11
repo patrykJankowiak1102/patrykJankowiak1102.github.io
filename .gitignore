@@ -1,2 +1,4 @@
 *.map
 *.code-workspace
+/.vscode
+/.gitignore
