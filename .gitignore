@@ -1,9 +1,13 @@
 *.map
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.code-workspace
 /.vscode
 /.gitignore
+=======
+*.code-workspace
+>>>>>>> parent of 36e4e70 (zmiany wizualne)
 =======
 *.code-workspace
 >>>>>>> parent of 36e4e70 (zmiany wizualne)
