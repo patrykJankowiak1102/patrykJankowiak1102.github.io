@@ -35,6 +35,9 @@
                     <a href="#projekty">Projekty</a>
                 </div>
                 <div>
+                    <a href="">CV</a>   
+                </div>
+                <div>
                     <a href="#kontakt">Kontakt</a>
                 </div>
             </ul>
@@ -119,7 +122,6 @@
                 }
             </script>
         </form>
-        <!-- https://formspree.io/f/mjvqgevn -->
     </section>
 </body>
 </html>
