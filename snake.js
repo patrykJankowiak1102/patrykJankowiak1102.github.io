@@ -11,7 +11,7 @@ var playerBody = [];
 var moveX = 0;
 var moveY = 0;
 var setIntervalId;
-var bestWynik = parseInt(localStorage.getItem("bestwynik") || "0");
+var bestWynik = localStorage.getItem("bestwynik") || 0;
 bestWynikDisplay.innerText = "Najlepszy wynik: ".concat(bestWynik);
 var changeFoodPos = function () {
     foodX = Math.floor(Math.random() * 20) + 1;
@@ -23,19 +23,19 @@ var koniecGry = function () {
     location.reload();
 };
 var changeDirection = function (e) {
-    if (e.key === "ArrowUp" && moveY !== 1) {
+    if (e.key === "ArrowUp" && moveY != 1) {
         moveX = 0;
         moveY = -1;
     }
-    else if (e.key === "ArrowDown" && moveY !== -1) {
+    else if (e.key === "ArrowDown" && moveY != -1) {
         moveX = 0;
         moveY = 1;
     }
-    else if (e.key === "ArrowLeft" && moveX !== 1) {
+    else if (e.key === "ArrowLeft" && moveX != 1) {
         moveX = -1;
         moveY = 0;
     }
-    else if (e.key === "ArrowRight" && moveX !== -1) {
+    else if (e.key === "ArrowRight" && moveX != -1) {
         moveX = 1;
         moveY = 0;
     }
@@ -50,7 +50,7 @@ var startGry = function () {
         playerBody.push([foodX, foodY]);
         wynik++;
         bestWynik = wynik >= bestWynik ? wynik : bestWynik;
-        localStorage.setItem("bestwynik", bestWynik.toString());
+        localStorage.setItem("bestwynik", bestWynik);
         wynikDisplay.innerText = "Wynik: ".concat(wynik);
         bestWynikDisplay.innerText = "Najlepszy wynik: ".concat(bestWynik);
     }

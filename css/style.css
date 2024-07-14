@@ -174,7 +174,7 @@ html body header .sourceCode a img {
   width: 60px;
 }
 html body main {
-  height: 80vh;
+  height: 83vh;
   position: relative;
   z-index: -1;
 }
@@ -257,7 +257,7 @@ html body main .arrow {
   margin-left: -20px;
   width: 40px;
   height: 40px;
-  background-image: url(/img/arrowDown.svg);
+  background-image: url(../img/arrowDown.svg);
   background-size: contain;
 }
 html body main .bounce {
