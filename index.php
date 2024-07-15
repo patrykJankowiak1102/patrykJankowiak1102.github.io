@@ -59,9 +59,7 @@
             <img src="img/typeScript_logo.svg" alt="TS logo" id="imgRounded">
             <img src="img/php_logo.svg" alt="PHP logo">
             <img src="img/sql_logo.svg" alt="SQL logo">
-            
             <img src="img/reactjs_logo.svg" alt="React.js logo" id="learning">
-            
             <img src="img/nodejs_logo.png" alt="Node.js logo" id="learning" >
             <div id="learningText"><p>Nadal się uczę:)</p></div>
         </div>
@@ -81,15 +79,15 @@
             </a>
         </div>
         <div>
-            <p>Pogoda</p>
-            <a href="pogoda.php">
-                <img src="img/tmpphoto.png" alt="Pogoda">
+            <p>Projekt 3</p>
+            <a href="index.php">
+                <img src="img/tmpphoto.png" alt="Projekt 3">
             </a>
         </div>
         <div>
             <p>Projekt 4</p>
-            <a href="lista.html">
-                <img src="img/tmpphoto.png" alt="Snake game">
+            <a href="index.php">
+                <img src="img/tmpphoto.png" alt="Projekt 4">
             </a>
         </div>
     </section>
@@ -101,21 +99,15 @@
                 <p class="status-msg <?php echo $status; ?>"><?php echo $statusMsg; ?></p>
             <?php } ?>
 
-            <!-- <label> -->
-                <div>
-                    <input type="email" name="email" placeholder="Email" required value="<?php echo !empty($postData['email'])?$postData['email']:''; ?>">
-                </div>
-            <!-- </label>
-            <label> -->
-                <div>
-                    <input type="text" name="name" placeholder="Imię i nazwisko" required value="<?php echo !empty($postData['name'])?$postData['name']:''; ?>">
-                </div>
-            <!-- </label>
-            <label> -->
-                <div>
-                    <textarea name="message" maxlength="2000" placeholder="Wiadomość"  required value="<?php echo !empty($postData['message'])?$postData['message']:''; ?>"></textarea>
-                </div>
-            <!-- </label> -->
+            <div>
+                <input type="email" name="email" placeholder="Email" required value="<?php echo !empty($postData['email'])?$postData['email']:''; ?>">
+            </div>
+            <div>
+                <input type="text" name="name" placeholder="Imię i nazwisko" required value="<?php echo !empty($postData['name'])?$postData['name']:''; ?>">
+            </div>
+            <div>
+                <textarea name="message" maxlength="2000" placeholder="Wiadomość"  required value="<?php echo !empty($postData['message'])?$postData['message']:''; ?>"></textarea>
+            </div>
             <input type="hidden" name="submit_frm" value="1">
             <button class="g-recaptcha" 
             data-sitekey="6LdUHw4qAAAAAJQCneVDB3xTox9Jwd-4xclo7_Qo" 
