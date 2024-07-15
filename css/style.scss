@@ -219,11 +219,12 @@ html{
                 margin-left: 30px;
                 margin-top: -5px;
                 display:flex;
+                align-items: center;
                 
                 img{
                     opacity: 0.8;
                     margin-left: 15px;
-                    width: 60px;
+                    width: 55px;
                     height: auto;
                     z-index: 1;
                     position: relative;
@@ -231,13 +232,42 @@ html{
                     transition: transform 0.2s ease, opacity 0.2s ease;
                     
                     &:hover{
-                        // cursor: pointer;
                         transform: scale(1.1);
                         opacity: 1;
                     }
                 }
                 #imgRounded{
                     border-radius: 5px
+                }
+                #learning{
+                    opacity: 0.3;
+                    animation: nameAppear 0.9s ease, imageLearningOpacity 0.9s ease;
+                    transition: transform 0.2s ease, opacity 0.2s ease;
+
+                    &:hover ~ #learningText{
+                        opacity: 0.7;
+                        transition: opacity 0.2s;
+                    }
+                }
+                #learningText{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    transition: opacity 0.5s;
+                    margin-left: 15px;
+                    padding: 0;
+                    background-color: $color-dark;
+                    color: $color-background;
+                    border-radius: 5px;
+                    font-size: 15px;
+                    z-index: 1;
+                    height: 25px;
+                    width: 150px;
+
+                    p{
+                        margin: 0;
+                    }
                 }
 
             }
@@ -347,7 +377,7 @@ html{
                     background-color: rgb(255, 255, 255, 0.8);
                     color: $color-font;
                     font-size: 20px;
-                    width: 504px;
+                    width: 100%;
                 }
                 button:hover{
                     cursor: pointer;
@@ -357,6 +387,7 @@ html{
                     font-size: 25px;
                     display: flex;
                     justify-content: center;
+                    width: 100%;
 
                     input{
                         height: 30px;
@@ -366,7 +397,7 @@ html{
                         padding-top: 5px;
                     }
                     input, textarea{
-                        width: 500px;
+                        width: 100%;
                         border: none;
                         border-radius: 5px;
                         margin-bottom: 10px;
@@ -467,6 +498,24 @@ html{
             }
             .player{
                 background-color: $color-dark;
+            }
+        }
+        .weatherContainer{
+            display: flex;
+            justify-content: center;
+
+            .weather{
+                
+                .autocomplete-items div:hover{
+                    cursor: pointer;
+                    background-color: rgb(0, 0, 0, 0.2);
+                }
+                .autocomplete-active {
+                    background-color: rgb(0, 0, 0, 0.2);
+                }
+            }
+            input{
+                width: 200px;
             }
         }
     }
@@ -597,6 +646,12 @@ html{
                 height: 80vh !important;
                 padding-bottom: 20vh !important;
         }
+        #kontakt{
+            font-size: 20px !important;
+            form{
+                width: 430px !important;
+            }
+        }
     }
 }
 @media screen and (max-width: 450px) {
@@ -664,6 +719,12 @@ html{
         #projekty{
             height: 60vh !important;
             padding-bottom: 20vh !important;
+        }
+        #kontakt{
+            font-size: 15px !important;
+            form{
+                width: 300px !important;
+            }
         }
     }
 }
@@ -747,11 +808,6 @@ html{
         -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
         clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
     }
-    // 20%{
-    //     transform: translateY(0);
-    //     -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-    //     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-    // }
     100%{
         transform: translateY(0);
         -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
@@ -762,9 +818,6 @@ html{
     0%{
         opacity: 0;
     }
-    // 20%{
-    //     opacity: 0.8;
-    // }
     100%{
         opacity: 0.8;
     }
@@ -773,11 +826,16 @@ html{
     0%{
         opacity: 0;
     }
-    // 20%{
-    //     opacity: 1;
-    // }
     100%{
         opacity: 1;
+    }
+}
+@keyframes imageLearningOpacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.3;
     }
 }
 @keyframes wave{

@@ -210,11 +210,12 @@ html body main .languages {
   margin-left: 30px;
   margin-top: -5px;
   display: flex;
+  align-items: center;
 }
 html body main .languages img {
   opacity: 0.8;
   margin-left: 15px;
-  width: 60px;
+  width: 55px;
   height: auto;
   z-index: 1;
   position: relative;
@@ -227,6 +228,34 @@ html body main .languages img:hover {
 }
 html body main .languages #imgRounded {
   border-radius: 5px;
+}
+html body main .languages #learning {
+  opacity: 0.3;
+  animation: nameAppear 0.9s ease, imageLearningOpacity 0.9s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+html body main .languages #learning:hover ~ #learningText {
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+html body main .languages #learningText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  margin-left: 15px;
+  padding: 0;
+  background-color: #457B9D;
+  color: #F1FAEE;
+  border-radius: 5px;
+  font-size: 15px;
+  z-index: 1;
+  height: 25px;
+  width: 150px;
+}
+html body main .languages #learningText p {
+  margin: 0;
 }
 html body main:before, html body main:after {
   content: "";
@@ -330,7 +359,7 @@ html body #kontakt form button {
   background-color: rgba(255, 255, 255, 0.8);
   color: #1D3557;
   font-size: 20px;
-  width: 504px;
+  width: 100%;
 }
 html body #kontakt form button:hover {
   cursor: pointer;
@@ -340,6 +369,7 @@ html body #kontakt form div {
   font-size: 25px;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 html body #kontakt form div input {
   height: 30px;
@@ -349,7 +379,7 @@ html body #kontakt form div textarea {
   padding-top: 5px;
 }
 html body #kontakt form div input, html body #kontakt form div textarea {
-  width: 500px;
+  width: 100%;
   border: none;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -442,6 +472,20 @@ html body .gra .food {
 }
 html body .gra .player {
   background-color: #457B9D;
+}
+html body .weatherContainer {
+  display: flex;
+  justify-content: center;
+}
+html body .weatherContainer .weather .autocomplete-items div:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+html body .weatherContainer .weather .autocomplete-active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+html body .weatherContainer input {
+  width: 200px;
 }
 
 @media screen and (max-width: 1550px) {
@@ -547,6 +591,12 @@ html body .gra .player {
     height: 80vh !important;
     padding-bottom: 20vh !important;
   }
+  body #kontakt {
+    font-size: 20px !important;
+  }
+  body #kontakt form {
+    width: 430px !important;
+  }
 }
 @media screen and (max-width: 450px) {
   body header {
@@ -603,6 +653,12 @@ html body .gra .player {
   body #projekty {
     height: 60vh !important;
     padding-bottom: 20vh !important;
+  }
+  body #kontakt {
+    font-size: 15px !important;
+  }
+  body #kontakt form {
+    width: 300px !important;
   }
 }
 @media screen and (max-width: 320px) {
@@ -704,6 +760,14 @@ html body .gra .player {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes imageLearningOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.3;
   }
 }
 @keyframes wave {

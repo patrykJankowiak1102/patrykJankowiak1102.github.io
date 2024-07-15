@@ -1,5 +1,5 @@
 <?php
-    include_once 'submit.php';
+    include_once 'php/submit.php';
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +59,11 @@
             <img src="img/typeScript_logo.svg" alt="TS logo" id="imgRounded">
             <img src="img/php_logo.svg" alt="PHP logo">
             <img src="img/sql_logo.svg" alt="SQL logo">
+            
+            <img src="img/reactjs_logo.svg" alt="React.js logo" id="learning">
+            
+            <img src="img/nodejs_logo.png" alt="Node.js logo" id="learning" >
+            <div id="learningText"><p>Nadal się uczę:)</p></div>
         </div>
         <div class="arrow bounce"></div>
     </main>
@@ -72,13 +77,13 @@
         <div>
             <p>To Do List</p>
             <a href="lista.html">
-                <img src="img/todo.png" alt="Snake game">
+                <img src="img/todo.png" alt="To do List">
             </a>
         </div>
         <div>
-            <p>Projekt 3</p>
-            <a href="lista.html">
-                <img src="img/tmpphoto.png" alt="Snake game">
+            <p>Pogoda</p>
+            <a href="pogoda.php">
+                <img src="img/tmpphoto.png" alt="Pogoda">
             </a>
         </div>
         <div>
@@ -96,21 +101,21 @@
                 <p class="status-msg <?php echo $status; ?>"><?php echo $statusMsg; ?></p>
             <?php } ?>
 
-            <label>
+            <!-- <label> -->
                 <div>
                     <input type="email" name="email" placeholder="Email" required value="<?php echo !empty($postData['email'])?$postData['email']:''; ?>">
                 </div>
-            </label>
-            <label>
+            <!-- </label>
+            <label> -->
                 <div>
                     <input type="text" name="name" placeholder="Imię i nazwisko" required value="<?php echo !empty($postData['name'])?$postData['name']:''; ?>">
                 </div>
-            </label>
-            <label>
+            <!-- </label>
+            <label> -->
                 <div>
                     <textarea name="message" maxlength="2000" placeholder="Wiadomość"  required value="<?php echo !empty($postData['message'])?$postData['message']:''; ?>"></textarea>
                 </div>
-            </label>
+            <!-- </label> -->
             <input type="hidden" name="submit_frm" value="1">
             <button class="g-recaptcha" 
             data-sitekey="6LdUHw4qAAAAAJQCneVDB3xTox9Jwd-4xclo7_Qo" 
