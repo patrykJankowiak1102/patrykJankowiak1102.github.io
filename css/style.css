@@ -358,7 +358,7 @@ html body #kontakt form button {
   border: 0;
   background-color: rgba(255, 255, 255, 0.8);
   color: #1D3557;
-  font-size: 20px;
+  font-size: 18px;
   width: 100%;
 }
 html body #kontakt form button:hover {
@@ -383,7 +383,7 @@ html body #kontakt form div input, html body #kontakt form div textarea {
   border: none;
   border-radius: 5px;
   margin-bottom: 10px;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 html body #kontakt form div textarea:focus, html body #kontakt form div input:focus {
   outline: none;
